@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/liljosi/backEncuesta/issues"
   },
-  "homepage": "https://github.com/liljosi/backEncuesta#readme"
+  "homepage": "https://github.com/liljosi/backEncuesta#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "knex": "^0.14.4"
+  }
 }
