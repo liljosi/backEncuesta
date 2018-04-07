@@ -16,11 +16,29 @@ router.post('/domicilio',(req,res,next)=>{
 
 });
 
-router.get('/domicilios',(req,res,next)=>{
+router.post('/info',(req,res,next)=>{
+
+    knex('escuela').insert({
+        director: req.body.director,
+        cct: req.body.cct,
+        correo : req.body.correo,
+        telefono: req.body.telefono,
+        grado : req.body.grado,
+        ciclo : req.body.ciclo,
+        tiempo: req.body.tiempo
+
+
+    }).then(function(data){
+        res.send('escuela se ha creado')
+    });
+
+});
+
+router.get('/domicilio',(req,res,next)=>{
    var domicilios = knex.select().table('domicilio').then(dom => {
-       console.log(dom)
+       res.json(dom)
    })
-  console.log(domicilios);
+
 
 });
 

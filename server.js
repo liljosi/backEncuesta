@@ -11,8 +11,10 @@ app.use(bodyParser.urlencoded({
 
 
 var escuelaRouter = require('./routes/escuela');
+var respuestaRouter = require('./routes/respuesta');
 
 app.use('/escuela', escuelaRouter);
+app.use('/escuela',respuestaRouter);
 
 app.listen('3000',()=>{
 console.log('node running on port 3000');
